@@ -1,10 +1,19 @@
 import { useEffect, useState } from "react";
 import { error } from "../helper/hottoast";
 import axios from "../instance.js";
+import { useNavigate } from "react-router-dom";
 
 const Sidebar = () => {
+  const navigate = useNavigate("");
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [userCount, setuserCount] = useState(1000);
+
+  const openDocFile = () => {
+    // Replace with your actual file URL
+    const fileUrl =
+      "/Draft - Terms and Conditions - Freedom From Hunger Campaign - August 2024.docx";
+    window.open(fileUrl, "_blank"); // Opens the file in a new tab
+  };
   const userCountCalculation = async () => {
     const response = await axios.get("/user/user-count");
 
@@ -25,6 +34,7 @@ const Sidebar = () => {
     <div className="flex flex-col mt-[37px]">
       <div className="flex justify-between px-6 h-full">
         <img
+          onClick={() => navigate("/")}
           className="h-[70px] w-[65px] flex md:hidden self-center"
           src="./assets/images/logo-2.png"
           alt=""
@@ -41,21 +51,19 @@ const Sidebar = () => {
         <div className="fixed top-15 right-3 mt-16 mr-4 bg-white shadow-lg rounded-xl w-[200px] p-4 z-50">
           <ul className="flex flex-col space-y-2">
             <li>
-              <a href="#link1" className="text-black text-lg">
-                About us
-              </a>
+              <span className="text-black text-lg">About us</span>
             </li>
             <div className="border-[1px] border-[#8E8E8E] rounded-lg"></div>
             <li>
-              <a href="#link2" className="text-black text-lg">
+              <span onClick={openDocFile} className="text-black text-lg">
                 Privacy Policy
-              </a>
+              </span>
             </li>
             <div className="border-[1px] border-[#8E8E8E] rounded-lg"></div>
             <li>
-              <a href="#link2" className="text-black text-lg">
+              <span onClick={openDocFile} className="text-black text-lg">
                 T&C
-              </a>
+              </span>
             </li>
           </ul>
         </div>
@@ -72,7 +80,6 @@ const Sidebar = () => {
       </div>
 
       {/* Bottom div */}
-     
     </div>
   );
 };
