@@ -67,7 +67,7 @@ const Otp = () => {
 
   return (
     <>
-      <div className="flex flex-col md:flex-row justify-between p-[52px] h-[65vh] md:h-full md:pt-20 md:pb-40">
+      <div className="flex flex-col md:flex-row justify-between p-[52px] h-auto md:h-full md:pt-20 md:pb-40">
         <div className="flex flex-col justify-center md:justify-start items-center w-full md:w-[344px] left-0 md:left-20 gap-7 top-40 px-4 md:px-0">
           <img
             className="w-[160px] h-[200px] hidden md:flex"
