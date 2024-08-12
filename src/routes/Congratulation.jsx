@@ -44,27 +44,27 @@ function Congratulation() {
 
   return (
     <>
-      <div className="flex flex-col md:flex-row justify-between p-[52px] h-[65vh] md:h-full md:pt-20 md:pb-40">
-        <div className="flex flex-col justify-start items-center w-[344px]  left-20 gap-3 top-40 ">
+      <div className="flex flex-col md:flex-row justify-between p-6 md:p-[52px] h-auto md:h-full md:pt-20 md:pb-40 ">
+        <div className="flex flex-col justify-center md:justify-start items-center   w-full md:w-[344px]   left-0 md:left-20 gap-9 top-40 px-4 md:px-0 ">
           <img
             className="w-[160px] h-[200px] hidden md:flex"
             src="./assets/images/logo-2.png"
             alt=""
           />
 
-          <div className="flex justify-center items-center text-[#F5F5F5] font-bold text-[70px] font-Antonio">
+          <div className="flex justify-center items-center text-[#F5F5F5] font-bold text-[52px] md:text-[70px] font-Antonio">
             <h1 className="relative inline-block text-shadow-custom">
               Thank You
             </h1>
           </div>
-          <p className="text-[24px] text-white text-center font-bold font-OpenSans">
+          <p className="text-[18px] md:text-[24px] text-white text-center font-bold font-OpenSans">
             You’ve taken a powerful step. We are creating a future where no
             child is left hungry. Stay connected, this is just the beginning.
           </p>
           <div className="flex justify-center"></div>
         </div>
 
-        <div className="flex flex-col justify-center md:justify-start items-cente  w-full md:w-[344px]   left-0 md:left-20 gap-9 top-40 px-4 md:px-0">
+        <div className="flex flex-col justify-center md:justify-start items-cente  w-full md:w-[344px] pb-20 md:pb-0   left-0 md:left-20 gap-9 top-40 px-4 md:px-0">
           <div className="flex flex-col gap-6 text-center text-white items-center">
             <img
               className=" md:w-96 md:p-0"
@@ -123,6 +123,16 @@ function Congratulation() {
           </div>
         </div>
       </div>
+      <Button
+        onClick={() =>
+          downloadImage(
+            sessionStorage.getItem("user_url"),
+            sessionStorage.getItem("user_filename")
+          )
+        }
+        text={`download`}
+        className={`!w-[80%] !mx-auto absolute bottom-0 left-0 right-0 flex justify-center mb-6 md:hidden `}
+      />
     </>
   );
 }

@@ -95,7 +95,7 @@ const Register = () => {
             className={`hidden md:flex`}
           />
         </div>
-        <div className="flex flex-col justify-center md:justify-start items-cente  w-full md:w-[344px]   left-0 md:left-20 gap-9 top-40 px-4 md:px-0">
+        <div className="flex flex-col justify-center md:justify-start items-cente  w-full md:w-[344px] pb-10 md:pb-0   left-0 md:left-20 gap-9 top-40 px-4 md:px-0">
           <div className="flex flex-col gap-24 text-center text-white items-center">
             <img
               src="./assets/images/logo-1.png"

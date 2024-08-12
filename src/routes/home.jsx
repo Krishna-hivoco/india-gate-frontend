@@ -5,7 +5,7 @@ const Home = () => {
   const navigate = useNavigate();
   return (
     <>
-      <div className="flex flex-col md:flex-row justify-between p-[52px] h-[65vh] md:h-full md:pt-20 md:pb-40">
+      <div className="flex flex-col md:flex-row justify-between p-[52px] h-[65vh] md:h-full md:pt-20 md:pb-40 ">
         <div className="flex flex-col justify-center md:justify-start items-cente  w-full md:w-[344px]   left-0 md:left-20 gap-9 top-40 px-4 md:px-0">
           <img
             className="w-[160px] h-[200px] ml-24 hidden md:flex"
@@ -23,7 +23,7 @@ const Home = () => {
             className={`hidden md:flex`}
           />
         </div>
-        <div className="flex flex-col justify-center md:justify-start items-center md:items-end  w-full md:w-[344px]   left-0 md:left-20 gap-9 top-40 px-4 md:px-0">
+        <div className="flex flex-col justify-center md:justify-start items-center md:items-end  w-full md:w-[344px]  pb-10 md:pb-0  left-0 md:left-20 gap-9 top-40 px-4 md:px-0">
           <div className="flex flex-col gap-24 text-center text-white items-center">
             <img
               src="./assets/images/logo-1.png"
