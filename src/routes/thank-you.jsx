@@ -3,7 +3,7 @@ import Button from "../components/Button";
 import axios from "../instance.js";
 import { useNavigate } from "react-router-dom";
 
-const Thankyou = () => {
+const Thankyou = ({ userCount }) => {
   const navigate = useNavigate();
   const [percentage, setPercentage] = useState(0);
   const [isLoading, setIsLoading] = useState(true);
@@ -118,7 +118,7 @@ const Thankyou = () => {
               </p>
               <div className="flex flex-col mt-[-10px] md:mt-[-20px]">
                 <p className="text-shadow-custom text-[62px] md:text-[120px] font-bold font-Antonio md:h-[160px]">
-                  {"1000"}
+                  {userCount}
                 </p>
                 <p className="text-white font-Inter text-[12px] md:text-[20px] font-bold">
                   and counting...

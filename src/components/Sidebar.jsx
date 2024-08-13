@@ -6,7 +6,7 @@ import { useNavigate } from "react-router-dom";
 const Sidebar = () => {
   const navigate = useNavigate("");
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const [userCount, setuserCount] = useState(1000);
+ 
 
   const openDocFile = () => {
     // Replace with your actual file URL
@@ -14,17 +14,6 @@ const Sidebar = () => {
       "/Draft - Terms and Conditions - Freedom From Hunger Campaign - August 2024.docx";
     window.open(fileUrl, "_blank"); // Opens the file in a new tab
   };
-  const userCountCalculation = async () => {
-    const response = await axios.get("/user/user-count");
-
-    if (response.status === 200) {
-      setuserCount(userCount + response.data.msg);
-    }
-  };
-
-  useEffect(() => {
-    userCountCalculation();
-  }, []);
 
   const toggleMenu = () => {
     console.log("object");

@@ -1,7 +1,7 @@
 import { useNavigate } from "react-router-dom";
 import Button from "../components/Button";
 
-const Home = () => {
+const Home = ({ userCount}) => {
   const navigate = useNavigate();
   return (
     <>
@@ -36,7 +36,7 @@ const Home = () => {
               </p>
               <div className="flex flex-col mt-[-10px] md:mt-[-20px]">
                 <p className="text-shadow-custom text-[62px] md:text-[120px] font-bold font-Antonio md:h-[160px]">
-                  {"1000"}
+                  {userCount}
                 </p>
                 <p className="text-white font-Inter text-[12px] md:text-[20px] font-bold">
                   and counting...
