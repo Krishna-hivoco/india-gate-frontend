@@ -1,13 +1,13 @@
 import React, { useEffect, useRef } from "react";
 import CloudPdfViewer from "@cloudpdf/viewer";
 
-function TermsCondition() {
+function PrivacyPolicy() {
   const viewer = useRef(null);
 
   useEffect(() => {
     CloudPdfViewer(
       {
-        documentId: "6f29f1fa-4c39-4b21-86bf-f486688dfbcc",
+        documentId: "f1002e6f-b75a-49f0-a47f-dceabe5f734d",
         darkMode: true,
       },
       viewer.current
@@ -22,4 +22,4 @@ function TermsCondition() {
   );
 }
 
-export default TermsCondition;
+export default PrivacyPolicy;

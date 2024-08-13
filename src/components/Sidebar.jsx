@@ -7,11 +7,11 @@ const Sidebar = () => {
   const navigate = useNavigate("");
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
-  const openDocFile = () => {
+  const openDocFile = (path) => {
     // Replace with your actual file URL
     // const fileUrl =
     //   "/Draft - Terms and Conditions - Freedom From Hunger Campaign - August 2024.docx";
-    window.open(`${window.location.origin}/terms-and-conditions`, "_blank");
+    window.open(`${window.location.origin}/${path}`, "_blank"); // Opens the file in a new tab
   };
 
   const toggleMenu = () => {
@@ -43,13 +43,19 @@ const Sidebar = () => {
             </li>
             <div className="border-[1px] border-[#8E8E8E] rounded-lg"></div>
             <li>
-              <span onClick={openDocFile} className="text-black text-lg">
+              <span
+                onClick={() => openDocFile("privacy-policy")}
+                className="text-black text-lg"
+              >
                 Privacy Policy
               </span>
             </li>
             <div className="border-[1px] border-[#8E8E8E] rounded-lg"></div>
             <li>
-              <span onClick={openDocFile} className="text-black text-lg">
+              <span
+                onClick={() => openDocFile("terms-and-conditions")}
+                className="text-black text-lg"
+              >
                 T&C
               </span>
             </li>
