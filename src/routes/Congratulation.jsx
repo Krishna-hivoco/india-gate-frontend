@@ -1,18 +1,30 @@
-import React, { useState } from "react";
-import CertificateSidebar from "../components/CertificateSidebar";
+import React, { useEffect, useState } from "react";
+
 import Button from "../components/Button";
-import Footer from "../components/Footer";
 
 import {
   FacebookShareButton,
   TwitterShareButton,
   LinkedinShareButton,
   WhatsappShareButton,
-  PinterestShareButton,
-  InstapaperShareButton,
 } from "react-share";
+import { useNavigate } from "react-router-dom";
 
 function Congratulation() {
+  const [countdown, setCountdown] = useState(5); // 5 seconds countdown
+  const navigate = useNavigate();
+
+  useEffect(() => {
+    if (countdown === 0) {
+      navigate("/"); // Redirect to home page
+    }
+
+    const timer = setInterval(() => {
+      setCountdown((prevCount) => prevCount - 1);
+    }, 1000); // Decrement every 1 second
+
+    return () => clearInterval(timer); // Cleanup timer on unmount
+  }, [countdown, navigate]);
   const [certificateUrl, setcertificateUrl] = useState(
     sessionStorage.getItem("user_url")
   );
@@ -81,17 +93,8 @@ function Congratulation() {
               text={`download`}
               className={`hidden md:flex w-52`}
             />
+
             <div className=" flex gap-4">
-              {/* <img
-                src="./assets/images/icon-one.png"
-                className="w-7 h-7 hover:cursor-pointer hover:scale-110 transition-all delay-150 duration-150 ease-in"
-                alt=""
-              /> */}
-
-              {/* <h2 className="font-OpenSans text-sm leading-[19px] md:text-base text-nowrap font-normal md:leading-[22px] text-center text-white">
-            Share on Social Media
-          </h2> */}
-
               <WhatsappShareButton
                 url={certificateUrl}
                 title={"View my certificate, Pledge and Share now :: "}
@@ -136,6 +139,7 @@ function Congratulation() {
           </div>
         </div>
       </div>
+
       <Button
         onClick={() =>
           downloadImage(

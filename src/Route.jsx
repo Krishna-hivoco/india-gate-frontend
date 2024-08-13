@@ -12,6 +12,7 @@ import { useEffect, useState } from "react";
 import Congratulation from "./routes/Congratulation.jsx";
 import TermsCondition from "./components/TermsCondition.jsx";
 import PrivacyPolicy from "./components/PrivacyPolicy.jsx";
+import AboutUs from "./components/AboutUs.jsx";
 
 const AppRouter = () => {
   const [userCount, setuserCount] = useState(1000);
@@ -54,6 +55,7 @@ const AppRouter = () => {
       <Routes>
         <Route path="/terms-and-conditions" element={<TermsCondition />} />
         <Route path="/privacy-policy" element={<PrivacyPolicy />} />
+        <Route path="/about-us" element={<AboutUs />} />
       </Routes>
     </BrowserRouter>
   );

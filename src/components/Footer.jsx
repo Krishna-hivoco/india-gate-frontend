@@ -11,8 +11,13 @@ const Footer = () => {
   return (
     <div className="container hidden md:block">
       <div className=" absolute bottom-0 left-0 w-full bg-[#682E21] bg-opacity-60 h-[75px] items-center justify-between px-20 hidden md:flex">
-        <div className="flex justify-between text-white gap-[50px]">
-          <span className="font-Inter text-[16px] font-normal">About Us</span>
+        <div className="flex justify-between text-white gap-[50px] hover:cursor-pointer">
+          <span
+            onClick={() => openDocFile("about-us")}
+            className="font-Inter text-[16px] font-normal"
+          >
+            About Us
+          </span>
           <span onClick={() => openDocFile("privacy-policy")}>
             Privacy Policy
           </span>
