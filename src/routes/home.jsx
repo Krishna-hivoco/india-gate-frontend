@@ -1,7 +1,7 @@
 import { useNavigate } from "react-router-dom";
 import Button from "../components/Button";
 
-const Home = ({ userCount}) => {
+const Home = ({ userCount }) => {
   const navigate = useNavigate();
   return (
     <>

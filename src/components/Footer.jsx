@@ -5,6 +5,9 @@ const Footer = () => {
     //   "/Draft - Terms and Conditions - Freedom From Hunger Campaign - August 2024.docx";
     window.open(`${window.location.origin}/${path}`, "_blank"); // Opens the file in a new tab
   };
+  const shareSocialMediaURL = (path) => {
+    window.open(`${path}`, "_blank"); // Opens the file in a new tab
+  };
   return (
     <div className="container hidden md:block">
       <div className=" absolute bottom-0 left-0 w-full bg-[#682E21] bg-opacity-60 h-[75px] items-center justify-between px-20 hidden md:flex">
@@ -19,27 +22,46 @@ const Footer = () => {
         </div>
         <div className="flex justify-between gap-[20px]">
           <img
+            onClick={() =>
+              shareSocialMediaURL("https://www.youtube.com/c/IndiaGateFoods")
+            }
             src="./assets/images/icon-one.png"
             className="w-[24px] h-[24px]"
             alt=""
           />
           <img
-            src="./assets/images/icon-two.png"
+            onClick={() =>
+              shareSocialMediaURL("https://x.com/IndiaGateFoods?mx=2")
+            }
+            src="./assets/images/TwitterX.png"
             className="w-[24px] h-[24px]"
             alt=""
           />
           <img
-            src="./assets/images/icon-three.png"
+            onClick={() =>
+              shareSocialMediaURL(
+                "https://www.linkedin.com/company/krbl-limited"
+              )
+            }
+            src="./assets/images/LinkedIn.png"
             className="w-[24px] h-[24px]"
             alt=""
           />
           <img
-            src="./assets/images/icon-four.png"
+            onClick={() =>
+              shareSocialMediaURL(" https://www.facebook.com/indiagatefoods")
+            }
+            src="./assets/images/Facebook.png"
             className="w-[24px] h-[24px]"
             alt=""
           />
           <img
-            src="./assets/images/icon-five.png"
+            onClick={() =>
+              shareSocialMediaURL(
+                "https://www.instagram.com/indiagatefoods/?hl=en"
+              )
+            }
+            src="./assets/images/Instagram.png"
             className="w-[24px] h-[24px]"
             alt=""
           />

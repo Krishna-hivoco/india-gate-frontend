@@ -101,7 +101,12 @@ const CertificateSidebar = ({ certificateUrl }) => {
           alt="certificate image"
         />
         <Button
-          onClick={()=>downloadImage(sessionStorage.getItem("user_url"), sessionStorage.getItem("user_filename"))}
+          onClick={() =>
+            downloadImage(
+              sessionStorage.getItem("user_url"),
+              sessionStorage.getItem("user_filename")
+            )
+          }
           text={`download`}
           className={`hidden md:flex w-52`}
         />
@@ -117,28 +122,28 @@ const CertificateSidebar = ({ certificateUrl }) => {
           </h2> */}
           <WhatsappShareButton url={certificateUrl} title={"Certificate"}>
             <img
-              src="./assets/images/icon-two.png"
+              src="./assets/images/WhatsApp.png"
               className="w-[24px] h-[24px] hover:cursor-pointer hover:scale-110 transition-all delay-150 duration-150 ease-in"
               alt=""
             />
           </WhatsappShareButton>
           <LinkedinShareButton url={certificateUrl} title={"Certificate"}>
             <img
-              src="./assets/images/icon-three.png"
+              src="./assets/images/LinkedIn.png"
               className="w-[24px] h-[24px] hover:cursor-pointer hover:scale-110 transition-all delay-150 duration-150 ease-in"
               alt=""
             />
           </LinkedinShareButton>
           <FacebookShareButton url={certificateUrl} title={"Certificate"}>
             <img
-              src="./assets/images/icon-four.png"
+              src="./assets/images/Facebook.png"
               className="w-[24px] h-[24px] hover:cursor-pointer hover:scale-110 transition-all delay-150 duration-150 ease-in"
               alt=""
             />
           </FacebookShareButton>
           <InstapaperShareButton>
             <img
-              src="./assets/images/icon-five.png"
+              src="./assets/images/Instagram.png"
               className="w-[24px] h-[24px] hover:cursor-pointer hover:scale-110 transition-all delay-150 duration-150 ease-in"
               alt=""
             />

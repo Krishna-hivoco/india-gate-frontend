@@ -18,7 +18,6 @@ const Congratulations = () => {
 
   return (
     <div className="flex flex-col md:flex-row justify-between p-[52px] h-[65vh] md:h-full md:pt-20 md:pb-40">
-
       <div className="px-6 md:p-0 flex flex-col items-center  gap-[12.5px] md:gap-5 flex-1 md:max-w-[400px] ">
         <img
           className="hidden md:block  h-48 mb-7"
@@ -74,27 +73,27 @@ const Congratulations = () => {
                 className="w-7 h-7 hover:cursor-pointer hover:scale-110 transition-all delay-150 duration-150 ease-in"
                 alt=""
               />
-              <WhatsappShareButton url={'certificateUrl'} title={"Certificate"}>
+              <WhatsappShareButton url={"certificateUrl"} title={"Certificate"}>
                 <img
-                  src="./assets/images/icon-two.png"
+                  src="./assets/images/WhatsApp.png"
                   className="w-[24px] h-[24px] hover:cursor-pointer hover:scale-110 transition-all delay-150 duration-150 ease-in"
                   alt=""
                 />
               </WhatsappShareButton>
-              <LinkedinShareButton url={'certificateUrl'} title={"Certificate"}>
+              <LinkedinShareButton url={"certificateUrl"} title={"Certificate"}>
                 <img
-                  src="./assets/images/icon-three.png"
+                  src="./assets/images/LinkedIn.png"
                   className="w-[24px] h-[24px] hover:cursor-pointer hover:scale-110 transition-all delay-150 duration-150 ease-in"
                   alt=""
                 />
               </LinkedinShareButton>
               <img
-                src="./assets/images/icon-four.png"
+                src="./assets/images/Facebook.png"
                 className="w-[24px] h-[24px] hover:cursor-pointer hover:scale-110 transition-all delay-150 duration-150 ease-in"
                 alt=""
               />
               <img
-                src="./assets/images/icon-five.png"
+                src="./assets/images/Instagram.png"
                 className="w-[24px] h-[24px] hover:cursor-pointer hover:scale-110 transition-all delay-150 duration-150 ease-in"
                 alt=""
               />

@@ -82,43 +82,56 @@ function Congratulation() {
               className={`hidden md:flex w-52`}
             />
             <div className=" flex gap-4">
-              <img
+              {/* <img
                 src="./assets/images/icon-one.png"
                 className="w-7 h-7 hover:cursor-pointer hover:scale-110 transition-all delay-150 duration-150 ease-in"
                 alt=""
-              />
+              /> */}
 
               {/* <h2 className="font-OpenSans text-sm leading-[19px] md:text-base text-nowrap font-normal md:leading-[22px] text-center text-white">
             Share on Social Media
           </h2> */}
-              <WhatsappShareButton url={certificateUrl} title={"Certificate"}>
+
+              <WhatsappShareButton
+                url={certificateUrl}
+                title={"View my certificate, Pledge and Share now :: "}
+              >
                 <img
-                  src="./assets/images/icon-two.png"
+                  src="./assets/images/WhatsApp.png"
                   className="w-[24px] h-[24px] hover:cursor-pointer hover:scale-110 transition-all delay-150 duration-150 ease-in"
                   alt=""
                 />
               </WhatsappShareButton>
-              <LinkedinShareButton url={certificateUrl} title={"Certificate"}>
+              <LinkedinShareButton
+                url={certificateUrl}
+                title={"View my certificate, Pledge and Share now :: "}
+              >
                 <img
-                  src="./assets/images/icon-three.png"
+                  src="./assets/images/LinkedIn.png"
                   className="w-[24px] h-[24px] hover:cursor-pointer hover:scale-110 transition-all delay-150 duration-150 ease-in"
                   alt=""
                 />
               </LinkedinShareButton>
-              <FacebookShareButton url={certificateUrl} title={"Certificate"}>
+              <FacebookShareButton
+                url={certificateUrl}
+                title={"View my certificate, Pledge and Share now :: "}
+              >
                 <img
-                  src="./assets/images/icon-four.png"
+                  src="./assets/images/Facebook.png"
                   className="w-[24px] h-[24px] hover:cursor-pointer hover:scale-110 transition-all delay-150 duration-150 ease-in"
                   alt=""
                 />
               </FacebookShareButton>
-              <InstapaperShareButton>
+              <TwitterShareButton
+                url={certificateUrl}
+                title={"View my certificate, Pledge and Share now :: "}
+              >
                 <img
-                  src="./assets/images/icon-five.png"
+                  src="./assets/images/TwitterX.png"
                   className="w-[24px] h-[24px] hover:cursor-pointer hover:scale-110 transition-all delay-150 duration-150 ease-in"
                   alt=""
                 />
-              </InstapaperShareButton>
+              </TwitterShareButton>
             </div>
           </div>
         </div>
