@@ -4,7 +4,7 @@ import axios from "../instance.js";
 
 const Home = ({ userCount, setuserCount }) => {
   const postPladge = async () => {
-    const response = await axios.post("/pladge");
+    const response = await axios.get("/pladge");
 
     if (response.status === 200) {
       setuserCount(1040 + response.data.msg);
