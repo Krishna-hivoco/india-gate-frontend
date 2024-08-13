@@ -14,14 +14,20 @@ const Footer = () => {
         <div className="flex justify-between text-white gap-[50px] hover:cursor-pointer">
           <span
             onClick={() => openDocFile("about-us")}
-            className="font-Inter text-[16px] font-normal"
+            className="font-Inter  text-base font-normal hover:cursor-pointer"
           >
             About Us
           </span>
-          <span onClick={() => openDocFile("privacy-policy")}>
+          <span
+            onClick={() => openDocFile("privacy-policy")}
+            className="font-Inter  text-base font-normal hover:cursor-pointer"
+          >
             Privacy Policy
           </span>
-          <span onClick={() => openDocFile("terms-and-conditions")}>
+          <span
+            onClick={() => openDocFile("terms-and-conditions")}
+            className="font-Inter  text-base font-normal hover:cursor-pointer"
+          >
             Terms and Conditions
           </span>
         </div>
@@ -31,7 +37,7 @@ const Footer = () => {
               shareSocialMediaURL("https://www.youtube.com/c/IndiaGateFoods")
             }
             src="./assets/images/icon-one.png"
-            className="w-[24px] h-[24px]"
+            className="w-[24px] h-[24px] hover:cursor-pointer"
             alt=""
           />
           <img
@@ -39,7 +45,7 @@ const Footer = () => {
               shareSocialMediaURL("https://x.com/IndiaGateFoods?mx=2")
             }
             src="./assets/images/TwitterX.png"
-            className="w-[24px] h-[24px]"
+            className="w-[24px] h-[24px] hover:cursor-pointer"
             alt=""
           />
           <img
@@ -49,7 +55,7 @@ const Footer = () => {
               )
             }
             src="./assets/images/LinkedIn.png"
-            className="w-[24px] h-[24px]"
+            className="w-[24px] h-[24px] hover:cursor-pointer"
             alt=""
           />
           <img
@@ -57,7 +63,7 @@ const Footer = () => {
               shareSocialMediaURL(" https://www.facebook.com/indiagatefoods")
             }
             src="./assets/images/Facebook.png"
-            className="w-[24px] h-[24px]"
+            className="w-[24px] h-[24px] hover:cursor-pointer"
             alt=""
           />
           <img
@@ -67,7 +73,7 @@ const Footer = () => {
               )
             }
             src="./assets/images/Instagram.png"
-            className="w-[24px] h-[24px]"
+            className="w-[24px] h-[24px] hover:cursor-pointer"
             alt=""
           />
         </div>
