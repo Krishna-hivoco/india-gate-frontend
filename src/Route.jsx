@@ -15,9 +15,9 @@ import PrivacyPolicy from "./components/PrivacyPolicy.jsx";
 import AboutUs from "./components/AboutUs.jsx";
 
 const AppRouter = () => {
-  const [userCount, setuserCount] = useState(1000);
+  const [userCount, setuserCount] = useState(1040);
   const userCountCalculation = async () => {
-    const response = await axios.get("/user/user-count");
+    const response = await axios.get("/get-pladge");
 
     if (response.status === 200) {
       setuserCount(userCount + response.data.msg);
@@ -31,7 +31,10 @@ const AppRouter = () => {
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<Layout />}>
-          <Route path="/" element={<Home userCount={userCount} />} />
+          <Route
+            path="/"
+            element={<Home userCount={userCount} setuserCount={setuserCount} />}
+          />
           {/* <Route path="/thank-you" element={<ThankYou />} /> */}
           <Route
             path="/congratulations"

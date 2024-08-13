@@ -1,7 +1,16 @@
 import { useNavigate } from "react-router-dom";
 import Button from "../components/Button";
+import axios from "../instance.js";
 
-const Home = ({ userCount }) => {
+const Home = ({ userCount, setuserCount }) => {
+  const postPladge = async () => {
+    const response = await axios.post("/pladge");
+
+    if (response.status === 200) {
+      setuserCount(1040 + response.data.msg);
+      navigate("/register");
+    }
+  };
   const navigate = useNavigate();
   return (
     <>
@@ -23,7 +32,9 @@ const Home = ({ userCount }) => {
           </p>
 
           <Button
-            onClick={() => navigate("/register")}
+            onClick={() => {
+              postPladge();
+            }}
             text={`pledge now`}
             className={`hidden md:flex`}
           />
@@ -60,7 +71,9 @@ const Home = ({ userCount }) => {
       </div>
 
       <Button
-        onClick={() => navigate("/register")}
+        onClick={() => {
+          postPladge();
+        }}
         text={`pledge now`}
         className="!w-[80%]  text-xl  leading-[25px]   !mx-auto absolute bottom-9 left-0 right-0 flex justify-center mb-9 md:hidden"
       />
