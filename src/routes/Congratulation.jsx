@@ -12,13 +12,13 @@ import {
 import { useNavigate } from "react-router-dom";
 
 function Congratulation() {
-  const [countdown, setCountdown] = useState(5); // 5 seconds countdown
+  const [countdown, setCountdown] = useState(60); // 5 seconds countdown
   const navigate = useNavigate();
 
   useEffect(() => {
-    if (countdown === 0) {
-      navigate("/"); // Redirect to home page
-    }
+    // if (countdown === 0) {
+    //   navigate("/"); // Redirect to home page
+    // }
 
     const timer = setInterval(() => {
       setCountdown((prevCount) => prevCount - 1);
@@ -52,6 +52,30 @@ function Congratulation() {
       window.URL.revokeObjectURL(url);
     } catch (error) {
       console.error("Error downloading the image:", error);
+    }
+  };
+
+  const convertToBlob = async (imageUrl) => {
+    const response = await fetch(imageUrl);
+    const blob = await response.blob();
+    return blob;
+  };
+
+  const shareImage = async (imageUrl) => {
+    try {
+      const blob = await convertToBlob(imageUrl);
+      const file = new File([blob], "image.jpg", { type: blob.type });
+
+      if (navigator.share) {
+        await navigator.share({
+          title: "Check out this image",
+          files: [file],
+        });
+      } else {
+        alert("Your browser does not support the Web Share API");
+      }
+    } catch (error) {
+      console.error("Error sharing image:", error);
     }
   };
 
@@ -95,7 +119,14 @@ function Congratulation() {
               className={`hidden md:flex w-52`}
             />
 
-            <div className=" flex gap-4">
+            <button
+              className="hover:cursor-pointer p-3 border rounded-full bg-black text-white"
+              onClick={() => shareImage(certificateUrl)}
+            >
+              Share on Social Media
+            </button>
+
+            {/* <div className=" flex gap-4">
               <WhatsappShareButton
                 url={certificateUrl}
                 title={"View my certificate, Pledge and Share now :: "}
@@ -136,7 +167,7 @@ function Congratulation() {
                   alt=""
                 />
               </TwitterShareButton>
-            </div>
+            </div> */}
           </div>
         </div>
       </div>
