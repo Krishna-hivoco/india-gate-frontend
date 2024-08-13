@@ -6,13 +6,12 @@ import { useNavigate } from "react-router-dom";
 const Sidebar = () => {
   const navigate = useNavigate("");
   const [isMenuOpen, setIsMenuOpen] = useState(false);
- 
 
   const openDocFile = () => {
     // Replace with your actual file URL
-    const fileUrl =
-      "/Draft - Terms and Conditions - Freedom From Hunger Campaign - August 2024.docx";
-    window.open(fileUrl, "_blank"); // Opens the file in a new tab
+    // const fileUrl =
+    //   "/Draft - Terms and Conditions - Freedom From Hunger Campaign - August 2024.docx";
+    window.open(`${window.location.origin}/terms-and-conditions`, "_blank");
   };
 
   const toggleMenu = () => {

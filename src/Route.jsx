@@ -10,6 +10,7 @@ import Otp from "./routes/otp.jsx";
 import Thankyou from "./routes/thank-you.jsx";
 import { useEffect, useState } from "react";
 import Congratulation from "./routes/Congratulation.jsx";
+import TermsCondition from "./components/TermsCondition.jsx";
 
 const AppRouter = () => {
   const [userCount, setuserCount] = useState(1000);
@@ -49,7 +50,9 @@ const AppRouter = () => {
           />
         </Route>
       </Routes>
-      <Routes></Routes>
+      <Routes>
+        <Route path="/terms-and-conditions" element={<TermsCondition />} />
+      </Routes>
     </BrowserRouter>
   );
 };

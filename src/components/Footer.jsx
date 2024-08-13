@@ -1,9 +1,9 @@
 const Footer = () => {
   const openDocFile = () => {
     // Replace with your actual file URL
-    const fileUrl =
-      "/Draft - Terms and Conditions - Freedom From Hunger Campaign - August 2024.docx";
-    window.open(fileUrl, "_blank"); // Opens the file in a new tab
+    // const fileUrl =
+    //   "/Draft - Terms and Conditions - Freedom From Hunger Campaign - August 2024.docx";
+    window.open(`${window.location.origin}/terms-and-conditions`, "_blank"); // Opens the file in a new tab
   };
   return (
     <div className="container hidden md:block">
