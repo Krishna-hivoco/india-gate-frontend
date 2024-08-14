@@ -65,7 +65,7 @@ const AppRouter = () => {
         <Route path="/terms-and-conditions" element={<TermsCondition />} />
         <Route path="/privacy-policy" element={<PrivacyPolicy />} />
         <Route path="/about-us" element={<AboutUs />} />
-        <Route path="/share" element={<Share />} />
+        {/* <Route path="/share" element={<Share />} /> */}
       </Routes>
     </BrowserRouter>
   );

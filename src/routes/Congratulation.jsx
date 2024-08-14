@@ -157,7 +157,7 @@ function Congratulation() {
                 Share
               </button>
 
-              <WhatsappShareButton
+              {/* <WhatsappShareButton
                 url={`${window.location.origin}/share?url=${encodeURIComponent(
                   certificateUrl
                 )}`}
@@ -168,7 +168,7 @@ function Congratulation() {
                   className="w-[24px] h-[24px] hover:cursor-pointer hover:scale-110 transition-all delay-150 duration-150 ease-in"
                   alt=""
                 />
-              </WhatsappShareButton>
+              </WhatsappShareButton> */}
 
             </div>
 
