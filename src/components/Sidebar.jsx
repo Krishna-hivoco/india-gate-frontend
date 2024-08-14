@@ -1,9 +1,42 @@
 import { useEffect, useState } from "react";
 
-import { useNavigate } from "react-router-dom";
 import SliderPopup from "./SliderPopup.jsx";
 
+// import { error } from "../helper/hottoast";
+// import axios from "../instance.js";
+import { useLocation, useNavigate } from "react-router-dom";
+
 const Sidebar = () => {
+
+  const { pathname } = useLocation();
+  const [showText, setShowText] = useState(true
+    // !(
+    //   pathname === "/register" ||
+    //   pathname === "/verify-otp" ||
+    //   pathname === "/thank-you" ||
+    //   pathname === "/congratulation"
+    // )
+  );
+  
+
+  console.log(showText);
+  
+  useEffect(() => {
+    if (
+      (
+        pathname === "/register" ||
+        pathname === "/verify-otp" ||
+        pathname === "/thank-you" ||
+        pathname === "/congratulation"
+      )
+    ) {
+      setShowText(false);
+    }
+  }, [pathname]);
+
+
+   
+
   const navigate = useNavigate("");
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
@@ -27,7 +60,7 @@ const Sidebar = () => {
     setIsMenuOpen((prev) => !prev);
   };
   return (
-    <div className="flex flex-col  pt-2 md:mt-[37px] ">
+    <div className="flex flex-col  pt-2 md:pt-[37px] ">
       <div className="flex justify-between px-6 h-full">
         <img
           onClick={() => navigate("/")}
@@ -95,11 +128,11 @@ const Sidebar = () => {
       {/* text-shadow: 2.24px 3.73px 0px  #682E21; */}
       <SliderPopup isOpen={isSliderOpen} toggleSlider={toggleSlider} />
 
-      <div className="mt- md:mt- flex justify-center items-center text-[#F5F5F5] text-4xl leading-[46px]  md:text-[55px] md:leading-[72px] font-Antonio px-6 md:px-4 ">
-        <h1 className="relative inline-block text-shadow-custom text-center">
-          #FreedomFromHunger
-        </h1>
-      </div>
+        <div className={`${showText ?"block":"hidden md:flex" } mt- md:mt- flex justify-center items-center text-[#F5F5F5] text-4xl leading-[46px]  md:text-[55px] md:leading-[72px] font-Antonio px-6 md:px-4 `}>
+          <h1 className="relative inline-block text-shadow-custom text-center">
+            #FreedomFromHunger
+          </h1>
+        </div>
     </div>
     // <div className="flex flex-col mt-[37px]">
     //   <div className="flex justify-between px-6 h-full">

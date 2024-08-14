@@ -64,8 +64,8 @@ export default {
         Inter: ["Inter", "sans-serif"],
       },
       backgroundImage: {
-        "custom-bg": "url('./assets/images/background.png')", // Replace with your image path
-        "custom-bg-2": "url('./assets/images/background-2.png')", // Replace with your image path
+        "custom-bg": "url('/assets/images/background.png')", // Replace with your image path
+        "custom-bg-2": "url('/assets/images/background-2.png')", // Replace with your image path
 
         "custom-gradient":
           "linear-gradient(to right, #682E21 0%, #895b51 50%, #682E21 100%)",

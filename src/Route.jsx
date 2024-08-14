@@ -35,27 +35,32 @@ const AppRouter = () => {
             path="/"
             element={<Home userCount={userCount} setuserCount={setuserCount} />}
           />
-          {/* <Route path="/thank-you" element={<ThankYou />} /> */}
-          <Route
-            path="/congratulations"
-            element={<Congratulations userCount={userCount} />}
-          />
+
           <Route
             path="/register"
             element={<Register userCount={userCount} />}
           />
           <Route path="/verify-otp" element={<Otp userCount={userCount} />} />
+
           <Route
             path="/thank-you"
             element={<Thankyou userCount={userCount} />}
           />
+
           <Route
             path="/congratulation"
             element={<Congratulation userCount={userCount} />}
           />
         </Route>
-      </Routes>
-      <Routes>
+
+        {/* </Routes>
+              <Routes>  */}
+
+        {/* <Route
+            path="/congratulations"
+            element={<Congratulations userCount={userCount} />}
+          /> */}
+
         <Route path="/terms-and-conditions" element={<TermsCondition />} />
         <Route path="/privacy-policy" element={<PrivacyPolicy />} />
         <Route path="/about-us" element={<AboutUs />} />

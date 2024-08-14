@@ -81,51 +81,79 @@ function Congratulation() {
 
   return (
     <>
-      <div className="flex flex-col md:flex-row justify-between p-6 md:p-[52px] h-auto md:h-full md:pt-20 md:pb-40 ">
-        <div className="flex flex-col justify-center md:justify-start items-center   w-full md:w-[344px]   left-0 md:left-20 gap-9 top-40 px-4 md:px-0 ">
+      <div className="flex flex-col md:flex-row justify-between px-6  md:p-[52px] h-auto md:h-full md:pt-20 md:pb-40 ">
+        <div className="flex flex-col justify-center md:justify-start items-center   w-full md:w-[344px]   left-0 md:left-20 gap-1 top-40 px- md:px-0 ">
           <img
             className="w-[160px] h-[200px] hidden md:flex"
             src="./assets/images/logo-2.png"
             alt=""
           />
 
-          <div className="flex justify-center items-center text-[#F5F5F5] font-bold text-[52px] md:text-[70px] font-Antonio">
+          <div className="flex justify-center items-center text-[#F5F5F5] font-bold text-[41px] leading-[53px] md:text-[55px] md:leading-[72px] font-Antonio">
             <h1 className="relative inline-block text-shadow-custom">
-              Thank You
+              CONGRATULATIONS!{" "}
             </h1>
           </div>
-          <p className="text-[18px] md:text-[24px] text-white text-center font-bold font-OpenSans">
+
+          <p className="text-[14px] leading-[22px] md:text-2xl text-white text-center font-bold font-OpenSans">
             You’ve taken a powerful step. We are creating a future where no
             child is left hungry. Stay connected, this is just the beginning.
           </p>
-          <div className="flex justify-center"></div>
+
+          {/* <div className=" flex justify-center"></div> */}
         </div>
 
-        <div className="flex flex-col justify-center md:justify-start items-cente  w-full md:w-[344px] pb-20 md:pb-0   left-0 md:left-20 gap-9 top-40 px-4 md:px-0">
-          <div className="flex flex-col gap-6 text-center text-white items-center">
+        <div className=" flex flex-col justify-center md:justify-start items-cente  w-full md:w-[344px] pb- md:pb-0   left-0 md:left-20 gap-9 top-40 px- md:px-0">
+          <div className="pt-2 flex flex-col gap-7 text-center text-white items-center">
             <img
-              className=" md:w-96 md:p-0"
+              className={`${
+                certificateUrl ? "border w-52 md:w-96 md:h-auto" : "w-auto h-auto"
+              } md:p-0`}
               src={`${certificateUrl}`}
               alt="certificate image"
             />
-            <Button
-              onClick={() =>
-                downloadImage(
-                  sessionStorage.getItem("user_url"),
-                  sessionStorage.getItem("user_filename")
-                )
-              }
-              text={`download`}
-              className={`hidden md:flex w-52`}
-            />
 
-            <button
-              style={{ backgroundColor: "rgba(245, 245, 245, 0.12) " }}
-              className="hover:cursor-pointer p-3  rounded-full  w-full font-semibold text-2xl shadow-md  shadow-white font-Antonio uppercase  text-white border-2 h-16"
-              onClick={() => shareImage(certificateUrl)}
-            >
-              Share
-            </button>
+            <div className="flex  flex-1 absolute px-6 left-0  bottom-3 w-full gap-[6px] md:hidden ">
+              <Button
+                onClick={() =>
+                  downloadImage(
+                    sessionStorage.getItem("user_url"),
+                    sessionStorage.getItem("user_filename")
+                  )
+                }
+                text={`download`}
+                className={` md:flex`}
+              />
+
+              <button
+                style={{ backgroundColor: "rgba(245, 245, 245, 0.12) " }}
+                className=" w-full hover:cursor-pointer p-3  rounded-full   font-semibold text-2xl shadow-md  shadow-white font-Antonio uppercase  text-white border-2 "
+                onClick={() => shareImage(certificateUrl)}
+              >
+                Share
+              </button>
+            </div>
+
+            <div className="hidden md:flex gap-2 w-full">
+                <Button
+                  onClick={() =>
+                    downloadImage(
+                      sessionStorage.getItem("user_url"),
+                      sessionStorage.getItem("user_filename")
+                    )
+                  }
+                  text={`download`}
+                  className={`hidden md:flex w-52`}
+                />
+
+                <button
+                  style={{ backgroundColor: "rgba(245, 245, 245, 0.12) " }}
+                  className="hidden md:block hover:cursor-pointer p-3  rounded-full  w-full font-semibold text-2xl shadow-md  shadow-white font-Antonio uppercase  text-white border-2 h-16"
+                  onClick={() => shareImage(certificateUrl)}
+                >
+                  Share
+                </button>
+            </div>
 
             {/* <div className=" flex gap-4">
               <WhatsappShareButton
@@ -173,7 +201,7 @@ function Congratulation() {
         </div>
       </div>
 
-      <Button
+      {/* <Button
         onClick={() =>
           downloadImage(
             sessionStorage.getItem("user_url"),
@@ -182,7 +210,7 @@ function Congratulation() {
         }
         text={`download`}
         className={`!w-[80%] !mx-auto absolute bottom-0 left-0 right-0 flex justify-center mb-6 md:hidden `}
-      />
+      /> */}
     </>
   );
 }
