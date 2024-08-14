@@ -44,7 +44,7 @@ const Thankyou = ({ userCount }) => {
       destination: sessionStorage.getItem("user_phone"),
       image: sessionStorage.getItem("user_url"),
     });
-    navigate("/congratulation");
+    navigate("/congratulations");
   };
 
   const getColorFromPercentage = (percent) => {

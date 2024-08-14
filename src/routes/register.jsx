@@ -82,7 +82,8 @@ const Register = ({ userCount }) => {
           />
 
           <p className="px-14 md:p-0 text-[14px] leading-[22px] md:text-2xl text-white text-center font-bold font-OpenSans  md:mt-0">
-            Enter your details to get your pledge certificate
+            Enter your details to get your
+            <br /> pledge certificate
           </p>
 
           <InputField
@@ -136,15 +137,20 @@ const Register = ({ userCount }) => {
       </div>
 
       <div className=" absolute bottom-8 left-0 right-0 flex  md:hidden flex-col items-center gap-3 ">
-        <div className="flex flex-col  text-white text-center md:text-right bg-black bg-opacity-50 md:bg-transparent px-6 py-2 rounded-xl">
-          <p className="text-white font-Inter text-[12px] md:text-[20px] font-bold ">
+        <div className=" text-white text-center md:text-right bg-black bg-opacity-50 md:bg-transparent     px-6 py-2 rounded-xl ">
+          <p className="text-white  font-OpenSans  md:font-Inter text-[11.3px] leading-[15.4px]  md:text-[20px] md:leading-6 font-bold ">
             Pledges so far
           </p>
-          <div className="flex flex-col mt-[-10px] md:mt-[-20px]">
-            <p className="text-shadow-custom text-[62px] md:text-[120px] font-bold font-Antonio md:h-[160px]">
+
+          <div className="flex flex-col mt-[-10px]  md:mt-[-20px]  ">
+            {/* text-shadow: 3.54px 3.54px 0px  #682E21; */}
+            {/* [text-shadow:_3.54_3.54px_0_#682E21] */}
+
+            <p className="text-shadow-custom text-[45.3px] leading-[58.7px]  md:text-[120px] md:leading-[165px] font-bold font-Antonio md:h-[160px]">
               {userCount}
             </p>
-            <p className="text-white font-Inter text-[12px] md:text-[20px] font-bold">
+
+            <p className="text-white mt- font-OpenSans  md:font-Inter text-[11.3px] leading-[15.4px] m  md:text-[20px] md:leading-6 font-bold ">
               and counting...
             </p>
           </div>

@@ -89,7 +89,9 @@ function Congratulation() {
             alt=""
           />
 
-          <div className="flex justify-center items-center text-[#F5F5F5] font-bold text-[41px] leading-[53px] md:text-[55px] md:leading-[72px] font-Antonio">
+
+
+          <div className="[text-shadow:_3.56px_3.56px_0_#682E22]   flex justify-center items-center text-[#F5F5F5] font-bold text-[41px] leading-[53px] md:text-[55px] md:leading-[72px] font-Antonio">
             <h1 className="relative inline-block text-shadow-custom">
               CONGRATULATIONS!{" "}
             </h1>
@@ -113,7 +115,7 @@ function Congratulation() {
               alt="certificate image"
             />
 
-            <div className="flex  flex-1 absolute px-6 left-0  bottom-3 w-full gap-[6px] md:hidden ">
+            <div className="flex flex-1 absolute px-6 left-0  bottom-3 w-full gap-[6px] md:hidden ">
               <Button
                 onClick={() =>
                   downloadImage(

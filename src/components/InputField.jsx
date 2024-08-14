@@ -12,7 +12,8 @@ const InputField = ({ text, icon, className, onChange, type, ...rest }) => {
         type={type || "text"}
         placeholder={text}
         onChange={onChange}
-        className={`flex-1 bg-transparent border-none px-2 py-1 rounded-[px] placeholder-custom text-[#682E21] placeholder-custom  outline-none text-[16px] font-normal font-Inter`}
+
+        className={`flex-1 bg-transparent border-none px-2 py-1 rounded-[px] placeholder:text-[#682E22B2]  text-[#682E21]  outline-none text-[16px] font-normal font-Inter`}
         {...rest}
       />
     </div>

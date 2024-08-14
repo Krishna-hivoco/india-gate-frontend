@@ -10,13 +10,19 @@ const Sidebar = () => {
 
   const { pathname } = useLocation();
   const [showText, setShowText] = useState(true
+  
     // !(
     //   pathname === "/register" ||
     //   pathname === "/verify-otp" ||
     //   pathname === "/thank-you" ||
-    //   pathname === "/congratulation"
+    //   pathname === "/congratulations"
     // )
   );
+
+  // const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+
+
   
 
   console.log(showText);
@@ -27,7 +33,7 @@ const Sidebar = () => {
         pathname === "/register" ||
         pathname === "/verify-otp" ||
         pathname === "/thank-you" ||
-        pathname === "/congratulation"
+        pathname === "/congratulations"
       )
     ) {
       setShowText(false);
@@ -35,7 +41,8 @@ const Sidebar = () => {
   }, [pathname]);
 
 
-   
+
+
 
   const navigate = useNavigate("");
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -55,12 +62,14 @@ const Sidebar = () => {
     window.open(`${window.location.origin}/${path}`, "_blank"); // Opens the file in a new tab
   };
 
-  const toggleMenu = () => {
-    console.log("object");
-    setIsMenuOpen((prev) => !prev);
-  };
+  // const toggleMenu = () => {
+  //   console.log("object");
+  //   setIsMenuOpen((prev) => !prev);
+  // };
   return (
-    <div className="flex flex-col  pt-2 md:pt-[37px] ">
+    <div
+      className="flex flex-col  pt-2 md:pt-[37px] "
+    >
       <div className="flex justify-between px-6 h-full">
         <img
           onClick={() => navigate("/")}
@@ -73,16 +82,19 @@ const Sidebar = () => {
           src="./assets/icons/menu-btn.png"
           className="h-11 md:hidden self-center"
           alt="Menu"
-          onClick={toggleMenu}
+          onClick={(e) => {
+            e.stopPropagation();
+            setIsMenuOpen(prev=>!prev);
+          }}
         />
       </div>
       {isMenuOpen && (
         <div className="fixed top-15 right-3 mt-16 mr-4 bg-white shadow-lg rounded-xl w-[200px] p-4 z-50">
-          <ul className="flex flex-col space-y-2">
-            <li>
+          <ul className="flex flex-col space-y-2 w-full">
+            <li className="w-full" >
               <span
                 onClick={() => openDocFile("about-us")}
-                className="text-black text-lg"
+                className="text-black text-lg  w-full"
               >
                 About us
               </span>

@@ -17,7 +17,7 @@ const Home = ({ userCount, setuserCount }) => {
       <div className=" flex flex-col md:flex-row justify-between md:p-[52px]   h-[vh] md:h-full md:pt-20 md:pb-40 ">
         <div className="flex flex-col justify-center md:justify-start items-center  w-full md:w-[344px]   left-0 md:left-20 gap-9 top-40 px-4 md:px-0">
             <img
-              className="w-[160px] h-[200px] ml-24 hidden md:flex"
+              className="w-[160px] h-[200px]  hidden md:flex"
               src="./assets/images/logo-2.png"
               alt=""
             />
@@ -56,8 +56,6 @@ const Home = ({ userCount, setuserCount }) => {
               </p>
 
               <div className="flex flex-col mt-[-10px]  md:mt-[-20px]  ">
-                {/* text-shadow: 3.54px 3.54px 0px  #682E21; */}
-                {/* [text-shadow:_3.54_3.54px_0_#682E21] */}
 
                 <p className="text-shadow-custom text-[45.3px] leading-[58.7px]  md:text-[120px] md:leading-[165px] font-bold font-Antonio md:h-[160px]">
                   {userCount}

@@ -1,9 +1,9 @@
 import { Routes, Route, BrowserRouter } from "react-router-dom";
 import Layout from "./components/Layout.jsx";
 import Home from "./routes/home.jsx";
-import ThankYou from "./components/ThankYou.jsx";
+// import ThankYou from "./components/ThankYou.jsx";
 import axios from "./instance.js";
-import Congratulations from "./components/Congratulations.jsx";
+// import Congratulation from "./components/congratulations.jsx";
 
 import Register from "./routes/register.jsx";
 import Otp from "./routes/otp.jsx";
@@ -48,7 +48,7 @@ const AppRouter = () => {
           />
 
           <Route
-            path="/congratulation"
+            path="/congratulations"
             element={<Congratulation userCount={userCount} />}
           />
         </Route>
@@ -57,7 +57,7 @@ const AppRouter = () => {
               <Routes>  */}
 
         {/* <Route
-            path="/congratulations"
+            path="/congratulationss"
             element={<Congratulations userCount={userCount} />}
           /> */}
 
