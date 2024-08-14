@@ -45,7 +45,7 @@ function Share() {
             alt="certificate image"
           />
 
-          <Helmet>
+          {/* <Helmet>
             <meta charSet="utf-8" />
             <title>My Title</title>
             <link rel="canonical" href={`${certificateUrl}`} />
@@ -65,7 +65,7 @@ function Share() {
               property="og:url"
               content="https://indiagategrainsofhope.com/"
             />
-          </Helmet>
+          </Helmet> */}
 
           <Button
             onClick={() => downloadImage(certificateUrl, "your-certificate")}
