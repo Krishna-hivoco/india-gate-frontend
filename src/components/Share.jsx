@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import Button from "./Button";
+import { Helmet } from "react-helmet";
 import { useSearchParams } from "react-router-dom";
 
 function Share() {
@@ -43,6 +44,29 @@ function Share() {
             src={`${certificateUrl}`}
             alt="certificate image"
           />
+
+          <Helmet>
+            <meta charSet="utf-8" />
+            <title>My Title</title>
+            <link rel="canonical" href={`${certificateUrl}`} />
+            <meta property="og:title" content="Your Image Title" />
+            <meta
+              property="og:description"
+              content="Description of the image."
+            />
+            <meta
+              property="og:image"
+              content={`${certificateUrl}`} 
+            />
+            <meta property="og:image:type" content="image/png" />
+            <meta property="og:image:width" content="800" />
+            <meta property="og:image:height" content="600" />
+            <meta
+              property="og:url"
+              content="https://indiagategrainsofhope.com/"
+            />
+          </Helmet>
+
           <Button
             onClick={() => downloadImage(certificateUrl, "your-certificate")}
             text={`download`}
