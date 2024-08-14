@@ -10,6 +10,7 @@ import {
   WhatsappShareButton,
 } from "react-share";
 import { useNavigate } from "react-router-dom";
+import Share from "../components/Share";
 
 function Congratulation() {
   const [countdown, setCountdown] = useState(60); // 5 seconds countdown
@@ -89,8 +90,6 @@ function Congratulation() {
             alt=""
           />
 
-
-
           <div className="[text-shadow:_3.56px_3.56px_0_#682E22]   flex justify-center items-center text-[#F5F5F5] font-bold text-[41px] leading-[53px] md:text-[55px] md:leading-[72px] font-Antonio">
             <h1 className="relative inline-block text-shadow-custom">
               CONGRATULATIONS!{" "}
@@ -109,7 +108,9 @@ function Congratulation() {
           <div className="pt-2 flex flex-col gap-7 text-center text-white items-center">
             <img
               className={`${
-                certificateUrl ? "border w-52 md:w-96 md:h-auto" : "w-auto h-auto"
+                certificateUrl
+                  ? "border w-52 md:w-96 md:h-auto"
+                  : "w-auto h-auto"
               } md:p-0`}
               src={`${certificateUrl}`}
               alt="certificate image"
@@ -137,24 +138,38 @@ function Congratulation() {
             </div>
 
             <div className="hidden md:flex gap-2 w-full">
-                <Button
-                  onClick={() =>
-                    downloadImage(
-                      sessionStorage.getItem("user_url"),
-                      sessionStorage.getItem("user_filename")
-                    )
-                  }
-                  text={`download`}
-                  className={`hidden md:flex w-52`}
-                />
+              <Button
+                onClick={() =>
+                  downloadImage(
+                    sessionStorage.getItem("user_url"),
+                    sessionStorage.getItem("user_filename")
+                  )
+                }
+                text={`download`}
+                className={`hidden md:flex w-52`}
+              />
 
-                <button
-                  style={{ backgroundColor: "rgba(245, 245, 245, 0.12) " }}
-                  className="hidden md:block hover:cursor-pointer p-3  rounded-full  w-full font-semibold text-2xl shadow-md  shadow-white font-Antonio uppercase  text-white border-2 h-16"
-                  onClick={() => shareImage(certificateUrl)}
-                >
-                  Share
-                </button>
+              <button
+                style={{ backgroundColor: "rgba(245, 245, 245, 0.12) " }}
+                className="hidden md:block hover:cursor-pointer p-3  rounded-full  w-full font-semibold text-2xl shadow-md  shadow-white font-Antonio uppercase  text-white border-2 h-16"
+                onClick={() => shareImage(certificateUrl)}
+              >
+                Share
+              </button>
+
+              <WhatsappShareButton
+                url={`${window.location.origin}/share?url=${encodeURIComponent(
+                  certificateUrl
+                )}`}
+                title={"View my certificate, Pledge and Share now :: "}
+              >
+                <img
+                  src="./assets/images/WhatsApp.png"
+                  className="w-[24px] h-[24px] hover:cursor-pointer hover:scale-110 transition-all delay-150 duration-150 ease-in"
+                  alt=""
+                />
+              </WhatsappShareButton>
+              
             </div>
 
             {/* <div className=" flex gap-4">

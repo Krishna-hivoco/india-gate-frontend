@@ -13,6 +13,7 @@ import Congratulation from "./routes/Congratulation.jsx";
 import TermsCondition from "./components/TermsCondition.jsx";
 import PrivacyPolicy from "./components/PrivacyPolicy.jsx";
 import AboutUs from "./components/AboutUs.jsx";
+import Share from "./components/Share.jsx";
 
 const AppRouter = () => {
   const [userCount, setuserCount] = useState(1040);
@@ -64,6 +65,7 @@ const AppRouter = () => {
         <Route path="/terms-and-conditions" element={<TermsCondition />} />
         <Route path="/privacy-policy" element={<PrivacyPolicy />} />
         <Route path="/about-us" element={<AboutUs />} />
+        <Route path="/share" element={<Share />} />
       </Routes>
     </BrowserRouter>
   );
