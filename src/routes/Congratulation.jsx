@@ -16,9 +16,9 @@ function Congratulation() {
   const navigate = useNavigate();
 
   useEffect(() => {
-    // if (countdown === 0) {
-    //   navigate("/"); // Redirect to home page
-    // }
+    if (countdown === 0) {
+      navigate("/"); // Redirect to home page
+    }
 
     const timer = setInterval(() => {
       setCountdown((prevCount) => prevCount - 1);

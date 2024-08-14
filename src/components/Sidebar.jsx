@@ -128,11 +128,19 @@ const Sidebar = () => {
       {/* text-shadow: 2.24px 3.73px 0px  #682E21; */}
       <SliderPopup isOpen={isSliderOpen} toggleSlider={toggleSlider} />
 
-        <div className={`${showText ?"block":"hidden md:flex" } mt- md:mt- flex justify-center items-center text-[#F5F5F5] text-4xl leading-[46px]  md:text-[55px] md:leading-[72px] font-Antonio px-6 md:px-4 `}>
-          <h1 className="relative inline-block text-shadow-custom text-center">
-            #FreedomFromHunger
-          </h1>
-        </div>
+      <div
+        className={`${
+          showText ? "block" : "hidden md:flex"
+        } mt- md:mt- flex justify-center items-center text-[#F5F5F5] text-4xl leading-[46px]  md:text-[55px] md:leading-[72px] font-Antonio px-6 md:px-4 `}
+      >
+        {/* [text-shadow:_2.24px_3.73px_0_#682E21] */}
+        <h1
+          className="relative inline-block  [text-shadow:_2.24px_3.73px_0_#682E21]
+ md:text-shadow-custom text-center"
+        >
+          #FreedomFromHunger
+        </h1>
+      </div>
     </div>
     // <div className="flex flex-col mt-[37px]">
     //   <div className="flex justify-between px-6 h-full">
