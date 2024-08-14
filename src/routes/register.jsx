@@ -13,6 +13,16 @@ const Register = ({ userCount }) => {
     phone: "",
   });
 
+  const handlePhoneChange = (e) => {
+    let value = e.target.value;
+    // Allow only digits
+
+    if (value.length <= 10) {
+      setInputObject({ ...inputObject, phone: value });
+    }
+    // setInputObject({ ...inputObject, phone: value });
+  };
+
   const buttonDisable = () => {
     if (
       inputObject.name === "" ||
@@ -81,11 +91,13 @@ const Register = ({ userCount }) => {
             onChange={(e) =>
               setInputObject({ ...inputObject, name: e.target.value })
             }
+            maxlength="15"
           />
           <InputField
-            onChange={(e) =>
-              setInputObject({ ...inputObject, phone: e.target.value })
-            }
+            onChange={handlePhoneChange}
+            value={inputObject.phone}
+            type="number"
+            pattern="[0-9]{10}"
             text={"Enter mobile number"}
             icon={`./assets/icons/phone.png`}
           />

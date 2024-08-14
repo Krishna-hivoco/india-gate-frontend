@@ -18,7 +18,7 @@ const Thankyou = ({ userCount }) => {
         } else {
           clearInterval(interval);
         }
-      }, 10); // Adjust the speed of the animation here
+      }, 30); // Adjust the speed of the animation here
     };
 
     // Start counter animation

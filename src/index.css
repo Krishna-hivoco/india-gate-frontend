@@ -8,6 +8,17 @@
 @tailwind utilities;
 
 
+/* Hide spinner controls in Chrome, Safari, Edge */
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+/* Hide spinner controls in Firefox */
+input[type="number"] {
+    -moz-appearance: textfield;
+}
 /*
  * react-circular-progressbar styles
  * All of the styles in this file are configurable!
