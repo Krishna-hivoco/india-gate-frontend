@@ -44,7 +44,7 @@ const SliderPopup = ({ isOpen, toggleSlider }) => {
                 className="w-16"
                 onClick={() =>
                   shareSocialMediaURL(
-                    "https://www.linkedin.com/company/krbl-limited"
+                    "https://www.instagram.com/indiagatefoods/?hl=en"
                   )
                 }
                 src="/assets/svgs/insta.svg"

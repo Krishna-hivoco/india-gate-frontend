@@ -121,7 +121,7 @@ function Congratulation() {
 
             <button
               style={{ backgroundColor: "rgba(245, 245, 245, 0.12) " }}
-              className="hover:cursor-pointer p-3  rounded-full  w-full font-semibold text-2xl shadow-md shadow-white font-Antonio uppercase  text-white border-2 h-16"
+              className="hover:cursor-pointer p-3  rounded-full  w-full font-semibold text-2xl shadow-md  shadow-white font-Antonio uppercase  text-white border-2 h-16"
               onClick={() => shareImage(certificateUrl)}
             >
               Share
