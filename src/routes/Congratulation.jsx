@@ -68,7 +68,7 @@ function Congratulation() {
 
       if (navigator.share) {
         await navigator.share({
-          title: "Check out this image",
+          title: "View my certificate, Pledge and Share now",
           files: [file],
         });
       } else {
