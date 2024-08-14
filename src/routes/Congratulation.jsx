@@ -161,7 +161,7 @@ function Congratulation() {
                 url={`${window.location.origin}/share?url=${encodeURIComponent(
                   certificateUrl
                 )}`}
-                title={"View my certificate, Pledge and Share now :: "}
+                // title={"View my certificate, Pledge and Share now :: "}
               >
                 <img
                   src="./assets/images/WhatsApp.png"
@@ -169,7 +169,7 @@ function Congratulation() {
                   alt=""
                 />
               </WhatsappShareButton>
-              
+
             </div>
 
             {/* <div className=" flex gap-4">
