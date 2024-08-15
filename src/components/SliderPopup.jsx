@@ -21,7 +21,7 @@ const SliderPopup = ({ isOpen, toggleSlider }) => {
               className="hover:cursor-pointer"
               src="/assets/svgs/close.svg"
               alt=""
-              srcset=""
+              srcSet=""
             />
           </div>
           <div className="flex flex-col items-center mt-5">
@@ -38,7 +38,7 @@ const SliderPopup = ({ isOpen, toggleSlider }) => {
                 }
                 src="/assets/svgs/youtube.svg"
                 alt=""
-                srcset=""
+                srcSet=""
               />
               <img
                 className="w-16"
@@ -49,7 +49,7 @@ const SliderPopup = ({ isOpen, toggleSlider }) => {
                 }
                 src="/assets/svgs/insta.svg"
                 alt=""
-                srcset=""
+                srcSet=""
               />
               <img
                 className="w-16"
@@ -60,7 +60,7 @@ const SliderPopup = ({ isOpen, toggleSlider }) => {
                 }
                 src="/assets/svgs/facebook.svg"
                 alt=""
-                srcset=""
+                srcSet=""
               />
               <img
                 className="w-16"
@@ -69,7 +69,7 @@ const SliderPopup = ({ isOpen, toggleSlider }) => {
                 }
                 src="/assets/svgs/twitter.svg"
                 alt=""
-                srcset=""
+                srcSet=""
               />
               <img
                 className="w-16"
@@ -80,7 +80,7 @@ const SliderPopup = ({ isOpen, toggleSlider }) => {
                 }
                 src="/assets/svgs/linkdin.svg"
                 alt=""
-                srcset=""
+                srcSet=""
               />
             </div>
           </div>
@@ -120,7 +120,7 @@ const SliderPopup = ({ isOpen, toggleSlider }) => {
     //           className="hover:cursor-pointer"
     //           src="/assets/svgs/close.svg"
     //           alt=""
-    //           srcset=""
+    //           srcSet=""
     //         />
     //       </div>
     //       <div className="flex flex-col items-center mt-5">
@@ -136,7 +136,7 @@ const SliderPopup = ({ isOpen, toggleSlider }) => {
     //             }
     //             src="/assets/svgs/whatsapp.svg"
     //             alt=""
-    //             srcset=""
+    //             srcSet=""
     //           />
     //           <img
     //             onClick={() =>
@@ -146,7 +146,7 @@ const SliderPopup = ({ isOpen, toggleSlider }) => {
     //             }
     //             src="/assets/svgs/facebook.svg"
     //             alt=""
-    //             srcset=""
+    //             srcSet=""
     //           />
     //           <img
     //             onClick={() =>
@@ -154,7 +154,7 @@ const SliderPopup = ({ isOpen, toggleSlider }) => {
     //             }
     //             src="/assets/svgs/twitter.svg"
     //             alt=""
-    //             srcset=""
+    //             srcSet=""
     //           />
     //           <img
     //             onClick={() =>
@@ -164,7 +164,7 @@ const SliderPopup = ({ isOpen, toggleSlider }) => {
     //             }
     //             src="/assets/svgs/linkdin.svg"
     //             alt=""
-    //             srcset=""
+    //             srcSet=""
     //           />
     //         </div>
     //       </div>

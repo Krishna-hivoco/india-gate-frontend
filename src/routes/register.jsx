@@ -93,7 +93,7 @@ const Register = ({ userCount }) => {
             onChange={(e) =>
               setInputObject({ ...inputObject, name: e.target.value })
             }
-            maxlength="15"
+            maxLength="15"
           />
 
           <InputField
