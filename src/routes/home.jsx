@@ -3,7 +3,25 @@ import Button from "../components/Button";
 import axios from "../instance.js";
 
 const Home = ({ userCount, setuserCount }) => {
+  function gtag_report_conversion(url) {
+    var callback = function () {
+      if (typeof (url) != 'undefined') {
+        window.location = url;
+      }
+    };
+    window.gtag('event', 'conversion', {
+      'send_to': 'AW-11093062414/XJm_CMjLuMoZEI7myqkp',
+      'event_callback': callback
+    });
+    return false;
+  }
+
+
+
+
   const postPladge = async () => {
+    gtag_report_conversion(`${window.location.origin}/register`)
+
     const response = await axios.get("/pladge");
 
     if (response.status === 200) {
