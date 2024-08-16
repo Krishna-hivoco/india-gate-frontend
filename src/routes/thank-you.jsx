@@ -9,6 +9,19 @@ const Thankyou = ({ userCount }) => {
   const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
+    // Trigger fbq('track', 'Lead') when the component mounts
+    if (typeof window.fbq !== "undefined") {
+      window.fbq("track", "Lead"); // Facebook Pixel tracking for lead
+    }
+
+    if (typeof window.gtag !== "undefined") {
+      window.gtag("event", "conversion", {
+        send_to: "AW-11093062414/-LDICOyWxMoZEI7myqkp",
+      });
+    }
+  }, []);
+
+  useEffect(() => {
     const startCounter = () => {
       let count = 0;
       const interval = setInterval(() => {
