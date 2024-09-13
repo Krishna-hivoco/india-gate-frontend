@@ -67,6 +67,8 @@ export default {
         "custom-bg": "url('/assets/images/background.png')", // Replace with your image path
         "custom-bg-2": "url('/assets/images/background-2.png')", // Replace with your image path
         "custom-blur-bg": "url('/assets/images/blur-background.png')", // Replace with your image path
+        "custom-mobile-bg": "url('/assets/images/new-mobile-bg.png')", // Replace with your image path
+
 
         "custom-gradient":
           "linear-gradient(to right, #682E21 0%, #895b51 50%, #682E21 100%)",

@@ -38,7 +38,7 @@ function Finish() {
 
   return (
     <div
-      className={` relative h-svh  bg-custom-bg-2 md:bg-custom-blur-bg bg-cover bg-center`}
+      className={` relative h-svh  bg-custom-mobile-bg md:bg-custom-blur-bg bg-cover bg-center`}
     >
       <div className="flex flex-col h-full md:hidden">
         <div className="flex-1 ">
@@ -87,7 +87,7 @@ function Finish() {
         <div className="text-white mb-24 px-6 ">
           <YouTube
             className="shadow-2xl"
-            videoId="Zevbcce_cuI"
+            videoId="5Hqzb8uLBTo"
             opts={opts}
             onReady={onReady}
             onEnd={() => setShowPopup(false)}
@@ -164,7 +164,7 @@ function Finish() {
           </p>
           <YouTube
             className="shadow-2xl pt-6"
-            videoId="Zevbcce_cuI"
+            videoId="5Hqzb8uLBTo"
             opts={opts1}
             onReady={onReady}
             onEnd={() => setShowPopup(false)}
