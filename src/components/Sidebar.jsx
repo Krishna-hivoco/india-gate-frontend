@@ -56,9 +56,7 @@ const Sidebar = () => {
 
   const openDocFile = (path) => {
     setIsMenuOpen(false);
-    // Replace with your actual file URL
-    // const fileUrl =
-    //   "/Draft - Terms and Conditions - Freedom From Hunger Campaign - August 2024.docx";
+    
     window.open(`${window.location.origin}/${path}`, "_blank"); // Opens the file in a new tab
   };
 

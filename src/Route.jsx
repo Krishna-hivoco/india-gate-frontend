@@ -1,4 +1,4 @@
-import { Routes, Route, BrowserRouter } from "react-router-dom";
+import { Routes, Route, BrowserRouter, Navigate } from "react-router-dom";
 import Layout from "./components/Layout.jsx";
 import Home from "./routes/home.jsx";
 // import ThankYou from "./components/ThankYou.jsx";
@@ -14,6 +14,7 @@ import TermsCondition from "./components/TermsCondition.jsx";
 import PrivacyPolicy from "./components/PrivacyPolicy.jsx";
 import AboutUs from "./components/AboutUs.jsx";
 import Share from "./components/Share.jsx";
+import Finish from "./routes/Finish.jsx";
 
 const AppRouter = () => {
   const [userCount, setuserCount] = useState(1040);
@@ -31,7 +32,7 @@ const AppRouter = () => {
   return (
     <BrowserRouter>
       <Routes>
-        <Route path="/" element={<Layout />}>
+        {/* <Route path="/" element={<Layout />}>
           <Route
             path="/"
             element={<Home userCount={userCount} setuserCount={setuserCount} />}
@@ -52,15 +53,13 @@ const AppRouter = () => {
             path="/congratulations"
             element={<Congratulation userCount={userCount} />}
           />
-        </Route>
+        </Route> */}
 
-        {/* </Routes>
-              <Routes>  */}
-
-        {/* <Route
-            path="/congratulationss"
-            element={<Congratulations userCount={userCount} />}
-          /> */}
+        <Route
+          path="/finish"
+          element={<Finish userCount={userCount} setuserCount={setuserCount} />}
+        />
+        <Route path="/" element={<Navigate to="/finish" />} />
 
         <Route path="/terms-and-conditions" element={<TermsCondition />} />
         <Route path="/privacy-policy" element={<PrivacyPolicy />} />
