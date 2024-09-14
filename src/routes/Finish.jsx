@@ -12,7 +12,7 @@ function Finish() {
     },
   };
   const opts1 = {
-    height: "300",
+    height: "250",
     width: "639",
     playerVars: {
       autoplay: 0,
@@ -152,18 +152,18 @@ function Finish() {
             />
           </div>
 
-          <h2 className=" font-Antonio  text-5xl 2xl:text-6xl font-bold leading-[82px] tracking-wide text-center text-white [text-shadow:_4.75px_4.75px_0px_#682E22]">
+          <h2 className=" font-Antonio  text-[2.8rem]  font-bold leading-[82px] tracking-wide text-center text-white [text-shadow:_4.75px_4.75px_0px_#682E22]">
             Thank You, India.
           </h2>
 
-          <p className="  font-OpenSans text-lg 2xl:text-xl leading-7 tracking-wide  font-semibold text-center text-white [text-shadow:_0px_4px_4px_#00000040]">
+          <p className="  font-OpenSans text-base leading-7 tracking-wide  font-semibold text-center text-white [text-shadow:_0px_4px_4px_#00000040]">
             Your support helped us in providing over&nbsp;
             <span className=" font-OpenSans  text-xl  ">1.5 lakh</span> meals to
-            children in <br /> need. We shall continue this journey to spread
-            hope, joy and build a <br /> brighter tomorrow.
+            children in need. We shall <br /> continue this journey to spread
+            hope, joy and build a brighter tomorrow.
           </p>
           <YouTube
-            className="shadow-2xl pt-6"
+            className="shadow-2xl pt-3"
             videoId="5Hqzb8uLBTo"
             opts={opts1}
             onReady={onReady}
